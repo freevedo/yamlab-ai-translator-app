@@ -1,6 +1,7 @@
 // This service will handle API calls to the translation endpoint
 // The API URL will be provided later and updated here
 
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const API_URL = 'https://ai-api.yamlabburkina.com/translate';
 const translationService = {
@@ -11,7 +12,7 @@ const translationService = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': '688d61012422c4a9ccd8a0a737d2f5ed',
+        'x-api-key': API_KEY,
       },
       body: JSON.stringify({
         text,
